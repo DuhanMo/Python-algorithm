@@ -18,3 +18,4 @@ indexLast = a.index(".")
 a = a[index+1:indexLast]
 pwd = a[0:3] + str(len(a)) + str(a.count("e")) + "!"
 print(pwd)
+
