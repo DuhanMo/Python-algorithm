@@ -17,7 +17,7 @@ waiting = 1
 
 while (True):
     try:
-        if chicken > 1:
+        if chicken >= 1:
             print("[남은 치킨 : {0}".format(chicken))
         else:
             raise SoldOutError("재료가 소진되었습니다.")
