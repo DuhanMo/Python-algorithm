@@ -3,17 +3,14 @@
 # 예를 들어, 세준이의 최고점이 70이고, 수학점수가 50이었으면 수학점수는 50/70*100이 되어 71.43점이 된다.
 #
 # 세준이의 성적을 위의 방법대로 새로 계산했을 때, 새로운 평균을 구하는 프로그램을 작성하시오.
+
 a = int(input())
-b = list(map(int, input().split()))
-c = 0
-new_point = []
 
-for i in b:
-    c += i
+sub_list = list(map(int, input().split()))
+new_list = []
+for a in sub_list:
+    a = a/(max(sub_list))*100
+    new_list.append(a)
+AVG = sum(new_list, 0.0) / len(new_list)
+print(AVG)
 
-avg_old = c / a
-
-for i in b:
-    new_point.append(i / max(b) * 100)
-
-print("%0.2f" % (sum(new_point) / a))
