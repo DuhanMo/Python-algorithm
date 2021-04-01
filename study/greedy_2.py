@@ -12,18 +12,38 @@
 # N의 값을 줄일 때 2 이상의 수로 나누는 작업이1을 빼는 작업보다 수를 훨씬 많이 줄일 수 있음
 # 정당성 분석 : 가능하면 최대한ㅇ 많이 나누는 작업이 최적의 해를 보장할 수 있나??
 # N이 아무리 큰수여로 K로 계속 나눈다면 기하급수적으로 빠르게 나눌 수 있음
+# n, k = map(int, input().split())
+#
+# result = 0
+#
+# while True:
+#     target = (n // k) * k
+#     result += (n - target)
+#     n = target
+#     if n < k:
+#         break
+#     result += 1
+#     n //= k
+#
+# result -= 1
+# print(result)
+
+
+
 n, k = map(int, input().split())
 
 result = 0
-
+# n 27 k 7
 while True:
-    target = (n // k) * k
-    result += (n - target)
-    n = target
+    target = (n//k) * k  # target = 21 , 0
+    result += n - target  # result = 6,7  +3 -> 10
+    n = target  # n = 21, n = 0
     if n < k:
         break
-    result += 1
-    n //= k
+    result += 1  # result = 7
+    n //= k  # n = 3
 
-result -= 1
+# 마지막으로 남은 수에 대하여 1씩 빼기
+result += (n - 1)  # 10-1 (n이 0이되어버렷어,)
 print(result)
+
