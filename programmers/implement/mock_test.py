@@ -17,7 +17,7 @@ def solution(answers):
 
     for i in range(3):
         for j in range(len(answers)):
-            if student_pattern[i][j%len(student_pattern[i])] == answers[j]:
+            if student_pattern[i][j % len(student_pattern[i])] == answers[j]:
                 count[i] += 1
 
     answer = []
