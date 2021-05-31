@@ -24,7 +24,7 @@ def solution2(arr):
     for i in range(2, len(arr)):
         l = math.lcm(l, arr[i])
 
-    return l
+    return math.lcm(*arr)
 
 
 arr = [2,6,8,14]
